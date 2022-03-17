@@ -26,20 +26,6 @@ def write_results(template_path, results_path, data_names, data_values):
                             sheet.cell(r, c).value = float(data_values[idx])
             i += 1
 
-    # i = 0
-    # for r in range(2, sheet.max_row+1):
-    #     for c in range(3, sheet.max_column+1):
-    #         val = sheet.cell(r, c).value
-
-    #         if val != None and "$!" in str(val):
-    #             if "." not in results[i]:
-    #                 sheet.cell(r, c).value = results[i]
-
-    #             else:
-    #                 sheet.cell(r, c).value = float(results[i])
-    #             i += 1
-
-
     report.save(results_path)
 
 
