@@ -1,12 +1,9 @@
-from numpy import save
 from openpyxl import load_workbook
-
 import win32com.client
 
 # Fills in ATE excel template of file type .xlsx
-# results must be index according to the cells of the template
-# that is, cells are filled in starting from the first index of results
-# Adapted from 
+# elements of data_names are the contents of the cells that are to be replaced by elements of the same indeces in data_values
+
 
 def write_results(template_path, results_path, data_names, data_values):
     report = load_workbook(template_path)
@@ -17,7 +14,7 @@ def write_results(template_path, results_path, data_names, data_values):
     for r in range(2, sheet.max_row+1):
         for c in range(3, sheet.max_column+1):
             val = sheet.cell(r, c).value
-            if val != None and "$!" in str(val):
+            if val != None:
                 for idx, name in enumerate(data_names):
                     if name == str(val):
                         if "." not in data_values[idx]:
@@ -41,8 +38,9 @@ def generate_pdf(results_path, pdf_path):
     final_report.Close()
 
 
-data_names = 	['$!Test_Date', '$!Tested_By', '$!Part_No', '$!6.4.3.', '$!6.5.5.']
-data_values =	['March 17, 2022', 'Tristan Lee', '123', 'P', '0.0']
+data_names = ['$!Test_Date', '$!Tested_By',
+              '$!Part_No', '$!6.4.3.', '$!6.5.5.']
+data_values = ['March 17, 2022', 'Tristan Lee', '123', 'P', '0.0']
 
 template = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\0100048-A5_R_1.xltx'
 ex_result = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\results.xlsx'
