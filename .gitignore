@@ -1,5 +1,4 @@
 # ignore all logs
-Application.exe
 python-3.6.0.exe
 0100048-A5_R_1.pdf
 __pycache__/
