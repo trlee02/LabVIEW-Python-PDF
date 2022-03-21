@@ -38,15 +38,15 @@ def generate_pdf(results_path, pdf_path):
     final_report.Close()
 
 
-data_names = ['$!Test_Date', '$!Tested_By',
-              '$!Part_No', '$!6.4.3.', '$!6.5.5.']
-data_values = ['March 17, 2022', 'Tristan Lee', '123', 'P', '0.0']
+# data_names = ['$!Test_Date', '$!Tested_By',
+#               '$!Part_No', '$!6.4.3.', '$!6.5.5.']
+# data_values = ['March 17, 2022', 'Tristan Lee', '123', 'P', '0.0']
 
-template = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\0100048-A5_R_1.xltx'
-ex_result = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\results.xlsx'
-pdf = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\0100048-A5_R_1.pdf'
-results = ["Tristan Lee", "0100044-001", "123456789", "Power-ATE-BB", "March 16, 2022", "P", "P", "P", "P", "P", "54.00", "0.0", "P", "P",
-           "P", "P", "58.01", "47.9", "54.08", "-0.3", "1.00", "-0.5", "52.00", "45.00", "=F36*F35", "50.00", "36.00", "P", "XLTX TEST"]
+# template = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\0100048-A5_R_1.xltx'
+# ex_result = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\results.xlsx'
+# pdf = r'C:\Users\trist\Desktop\Desktop\UBC Engineering\Coop\Alpha\Work\Python\PyLab_PDF\templates\results.pdf'
+# results = ["Tristan Lee", "0100044-001", "123456789", "Power-ATE-BB", "March 16, 2022", "P", "P", "P", "P", "P", "54.00", "0.0", "P", "P",
+#            "P", "P", "58.01", "47.9", "54.08", "-0.3", "1.00", "-0.5", "52.00", "45.00", "=F36*F35", "50.00", "36.00", "P", "XLTX TEST"]
 
-write_results(template, ex_result, data_names, data_values)
-generate_pdf(ex_result, pdf)
+# write_results(template, ex_result, data_names, data_values)
+# generate_pdf(ex_result, pdf)
