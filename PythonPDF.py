@@ -17,7 +17,7 @@ def write_results(template_path, results_path, data_names, data_values):
             if val != None:
                 for idx, name in enumerate(data_names):
                     if name == str(val):
-                        if "." not in data_values[idx]:
+                        if "." not in data_values[idx]: # this might need to be changed
                             sheet.cell(r, c).value = data_values[idx]
                         else:
                             sheet.cell(r, c).value = float(data_values[idx])
