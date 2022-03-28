@@ -7,7 +7,8 @@ import win32com.client
 
 
 # Fills in ATE excel template of file type .xlsx
-# requires: results of test_names are at corresponding indeces in test_results
+
+
 def write_results(template_path, results_path, test_names, test_results):
 
     # loading template file
